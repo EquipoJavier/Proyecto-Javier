@@ -1,3 +1,59 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding-right: 2rem;
+  box-sizing: border-box;
+  background-color: white;
+  padding-left: 4rem;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+.heading_index-primary {
+  text-transform: uppercase;
+  color: white;
+}
+.heading_index-primary--main {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 6.5rem;
+  font-size: 7rem;
+  padding-left: 5rem;
+}
+.heading_index-primary--sub {
+  display: block;
+  font-weight: 500;
+  letter-spacing: 1rem;
+  font-size: 2rem;
+}
+
+.header_cultura--text-box {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.heading_cultura-primary {
+  text-transform: uppercase;
+  color: white;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 6.5rem;
+  font-size: 7rem;
+  padding-left: 5rem;
+}
+
 .foot {
   background-color: black;
   color: white;
@@ -5,6 +61,163 @@
   padding-bottom: 1.2rem;
   display: flex;
   flex-direction: column;
-  text-align: center; }
-  .foot:hover {
-    background-color: blue; }
+  text-align: center;
+}
+.foot:hover {
+  background-color: grey;
+}
+
+.header_index {
+  background-color: #bdbdc0;
+  height: 85vh;
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(7, 7, 7, 0.8)), url("../IMG/header.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+.header_index--text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header_cultura {
+  height: 36vh;
+  background-image: url("../IMG/header-cultura.jpg");
+  opacity: 0.8;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  background-color: #bdbdc0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+}
+.header_cultura--text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.menu {
+  position: fixed;
+  height: 100vh;
+  width: 20rem;
+  margin-left: -16rem;
+  background-color: #2e2c2c;
+  top: 0rem;
+  left: 0;
+  z-index: 9000;
+}
+.menu:hover {
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  margin-left: 0rem;
+}
+.menu__tabla {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+}
+.menu__tabla tr td {
+  border-bottom: rgba(255, 255, 255, 0.9) solid 3px;
+  width: 100%;
+  height: 10rem;
+  padding-left: 1.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
+}
+
+@keyframes moveInLeft {
+  0% {
+    transform: translate(-10rem);
+  }
+  50% {
+    transform: translate(-2rem);
+  }
+  100% {
+    transform: translate(0rem);
+  }
+}
+.museos {
+  background-color: #ececec;
+  height: 100vh;
+  position: relative;
+}
+.museos--text-box {
+  position: absolute;
+  left: 50%;
+  top: 10rem;
+  transform: translate(-50%, 0);
+}
+.museos_heading--primary {
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: 800;
+  text-align: center;
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(7, 7, 7, 0.8));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding-right: 2rem;
+  box-sizing: border-box;
+  background-color: white;
+  padding-left: 4rem;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+.heading_index-primary {
+  text-transform: uppercase;
+  color: white;
+}
+.heading_index-primary--main {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 6.5rem;
+  font-size: 7rem;
+  padding-left: 5rem;
+}
+.heading_index-primary--sub {
+  display: block;
+  font-weight: 500;
+  letter-spacing: 1rem;
+  font-size: 2rem;
+}
+
+.header_cultura--text-box {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.heading_cultura-primary {
+  text-transform: uppercase;
+  color: white;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 6.5rem;
+  font-size: 7rem;
+  padding-left: 5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

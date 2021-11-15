@@ -1,0 +1,37 @@
+.header_index {
+    background-color: rgb(189, 189, 192);
+    height: 85vh;
+    background-image:linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(7, 7, 7, 0.8)),url('../IMG/header.jpg');
+    background-size: cover; 
+    background-position: top; 
+    position: relative;
+
+      
+    &--text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; 
+      }   
+  }
+
+  .header_cultura {
+    height: 36vh;
+    background-image:url('../IMG/header-cultura.jpg');
+    opacity: 0.8;
+    background-size: cover; 
+    background-position: top;
+    position: relative;
+    background-color: rgb(189, 189, 192);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+
+    &--text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        text-align: center; 
+    }   
+
+  }
