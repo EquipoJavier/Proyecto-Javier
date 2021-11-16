@@ -1,0 +1,19 @@
+.header__gastronomia {
+    height: 36vh;
+    background-image:url('../Recursos/img/header-gastronomia.jpg');
+    opacity: 0.8;
+    background-size: cover; 
+    background-position: top;
+    position: relative;
+    background-color: rgb(189, 189, 192);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+
+    &--text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        text-align: center; 
+    }   
+  }
+
