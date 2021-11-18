@@ -1,0 +1,19 @@
+.row {
+    max-width: $grid-width; // tamaño máximo
+    margin: 0 auto;
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+    @include colwidth;
+
+
+    [class^="col-"] {   //asi seleccionamos todas las clases
+        //attribute selector
+     float: left;
+     &:not(:last-child) {
+         margin-right: $gutter-horizontal;
+     } 
+    }
+}
