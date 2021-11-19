@@ -11,7 +11,8 @@
         z-index: 10;
         transition: all .2s;
         outline-offset: 2rem;
-        
+        opacity: .8;
+        border-radius: 1rem;
         &--p1 {
             left: -10rem;
             top: -15rem;
@@ -47,28 +48,36 @@
         &--p8 {
             right: -5rem;
             top: 30rem;
-        }
-                    
-        &--texto{
-            text-transform: uppercase;
-            text-align: center;
-            position: absolute;
-            margin-top: 10%;
-            margin-left: 35%;
-            margin-right: 35%;
-            padding: .5rem;
-            width: 30%;
-            font-weight: 700;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        
+        }                  
+
         &:hover {
             transform: scale(1.2) translateY(-1rem);
             box-shadow: 0 2.5rem 4rem rgba(black, 1);
             z-index: 30;
-        }
+            opacity: 1;
 
+        }
+        &--texto{
+            text-transform: uppercase;
+            text-align: center;
+            position: absolute;
+            margin-top: 30%;
+            padding: .5rem;
+            width: 100%;
+            font-weight: 700;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 0;
+            transition: none;
+            width: 100%;
+
+            &:hover{
+                transform:none;
+                box-shadow: none;
+                z-index: 10;
+                opacity: 1;
+            }
+        }
     }
 }
 

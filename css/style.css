@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 0 - 600px:      Phone
 600 - 900px:    Tablet portrait
@@ -226,6 +227,8 @@ body {
   z-index: 10;
   transition: all 0.2s;
   outline-offset: 2rem;
+  opacity: 0.8;
+  border-radius: 1rem;
 }
 .parques_contenido__imagenes--imagen--p1 {
   left: -10rem;
@@ -259,23 +262,31 @@ body {
   right: -5rem;
   top: 30rem;
 }
-.parques_contenido__imagenes--imagen--texto {
-  text-transform: uppercase;
-  text-align: center;
-  position: absolute;
-  margin-top: 10%;
-  margin-left: 35%;
-  margin-right: 35%;
-  padding: 0.5rem;
-  width: 30%;
-  font-weight: 700;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 .parques_contenido__imagenes--imagen:hover {
   transform: scale(1.2) translateY(-1rem);
   box-shadow: 0 2.5rem 4rem black;
   z-index: 30;
+  opacity: 1;
+}
+.parques_contenido__imagenes--imagen--texto {
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  margin-top: 30%;
+  padding: 0.5rem;
+  width: 100%;
+  font-weight: 700;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 0;
+  transition: none;
+  width: 100%;
+}
+.parques_contenido__imagenes--imagen--texto:hover {
+  transform: none;
+  box-shadow: none;
+  z-index: 10;
+  opacity: 1;
 }
 
 .foot {
@@ -470,8 +481,96 @@ body {
   padding-top: 30rem;
 }
 
-.prueba {
-  max-width: 30rem;
+.otras_visitas {
+  background-color: #ececec;
+  height: 200vh;
+  position: relative;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 25rem;
+  margin-top: 0;
+  text-align: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(216, 216, 216, 0.1)), url("../Recursos/img/fondo-otras-visitas.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.otras_visitas--text-box {
+  position: absolute;
+  left: 50%;
+  top: 10rem;
+  transform: translate(-50%, 0);
+}
+.otras_visitas_heading--primary {
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: 800;
+  text-align: center;
+  background-image: url("../Recursos/img/titulo-otras-visitas.jpg");
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.otras_visitas--imagenes {
+  position: relative;
+  border: 10px solid transparent;
+  padding-top: 1rem;
+  transition: all 0.2s;
+  height: 34rem;
+}
+.otras_visitas--imagenes--text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  transition: all 0.5s;
+  opacity: 0;
+  font-weight: 700;
+}
+.otras_visitas--imagenes--1 {
+  border-image: url("../Recursos/img/palacio-real.jpg") 30 round;
+}
+.otras_visitas--imagenes--2 {
+  border-image: url("../Recursos/img/matadero.jpg") 30 round;
+}
+.otras_visitas--imagenes--3 {
+  border-image: url("../Recursos/img/Estacion-fantasma-Chamberi.jpg") 30 round;
+}
+.otras_visitas--imagenes--4 {
+  border-image: url("../Recursos/img/puerta-alcala.jpg") 30 round;
+}
+.otras_visitas--imagenes--5 {
+  border-image: url("../Recursos/img/Teatro-Real.jpg") 30 round;
+}
+.otras_visitas--imagenes--6 {
+  border-image: url("../Recursos/img/Catedral-Almudena.jpg") 30 round;
+}
+.otras_visitas--imagenes--7 {
+  border-image: url("../Recursos/img/4-torres.jpg") 30 round;
+}
+.otras_visitas--imagenes--8 {
+  border-image: url("../Recursos/img/Plaza-España.jpg") 30 round;
+}
+.otras_visitas--imagenes--9 {
+  border-image: url("../Recursos/img/Plaza-Mayor.jpg") 30 round;
+}
+.otras_visitas--imagenes--imagen {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+}
+.otras_visitas--imagenes:hover .otras_visitas--imagenes--text {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.otras_visitas--imagenes:hover .otras_visitas--imagenes--imagen {
+  transform: scale(1);
+  filter: blur(1.5px) brightness(90%);
+}
+.otras_visitas--imagenes:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

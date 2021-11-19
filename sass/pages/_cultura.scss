@@ -73,8 +73,114 @@
     }
 }
 
+.otras_visitas{
+    background-color: rgb(236, 236, 236);
+    height: 200vh;
+    position: relative;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 25rem;
+    margin-top: 0;
+    text-align: center;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(216, 216, 216, 0.1)),url("../Recursos/img/fondo-otras-visitas.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    &--text-box{
+        position: absolute;
+        left: 50%;
+        top: 10rem;
+        transform: translate(-50%, 0);
+    }
+    &_heading--primary{ 
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        font-weight: 800;
+        text-align: center;
+        background-image: url("../Recursos/img/titulo-otras-visitas.jpg");
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    &--imagenes{
+     
+        position: relative;
+        border: 10px solid transparent;
+        padding-top: 1rem;
+        transition: all .2s;
+        height: 34rem;
+
+        
+        &--text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            color: $color-white;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            text-align: center;
+            transition: all 0.5s;
+            opacity: 0;
+            font-weight: 700;
+        }
+            
     
-.prueba{
-   max-width: 30rem;
-   
-} 
+        &--1{
+            border-image: url("../Recursos/img/palacio-real.jpg") 30 round;
+        }
+
+        &--2{
+            border-image: url("../Recursos/img/matadero.jpg") 30 round;
+        }
+        
+        &--3{
+            border-image: url("../Recursos/img/Estacion-fantasma-Chamberi.jpg") 30 round;
+        }
+        
+        &--4{
+            border-image: url("../Recursos/img/puerta-alcala.jpg") 30 round;
+        }
+        
+        &--5{
+            border-image: url("../Recursos/img/Teatro-Real.jpg") 30 round;
+        }
+        
+        &--6{
+            border-image: url("../Recursos/img/Catedral-Almudena.jpg") 30 round;
+        }
+        
+        &--7{
+            border-image: url("../Recursos/img/4-torres.jpg") 30 round;
+        }
+        
+        &--8{
+            border-image: url("../Recursos/img/Plaza-España.jpg") 30 round;
+        }
+        
+        &--9{
+            border-image: url("../Recursos/img/Plaza-Mayor.jpg") 30 round;
+        }
+
+        &--imagen{
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+
+        }
+
+        &:hover &--text {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+        &:hover &--imagen  {
+            transform: scale(1);
+            filter: blur(1.5px) brightness(90%);
+        }
+        &:hover{
+            transform: scale(1.1);
+        }
+    }    
+    
+}
