@@ -1,0 +1,142 @@
+.cultura-museo {
+    perspective: 150rem; 
+    -moz-perspective: 150rem;
+    position: relative;
+
+    height: 40rem;
+
+    &__side {
+        height: 40rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden; 
+        border-radius: 3px;
+        overflow: hidden; 
+        box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+        &--front {
+            background-color: black;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            &-1 {
+                background-image: linear-gradient(to right bottom, rgb(247, 191, 223), rgb(250, 114, 51));
+            }
+            &-2 {
+                background-image: linear-gradient(to right bottom, rgb(247, 191, 223), rgb(250, 114, 51));
+            }
+            &-3 {
+                background-image: linear-gradient(to right bottom, rgb(247, 191, 223), rgb(250, 114, 51));
+            }
+            &-4 {
+                background-image: linear-gradient(to right bottom, rgb(247, 191, 223), rgb(250, 114, 51));
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+ &__picture {
+        background-size: cover;
+        height: 30rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        border-top-left-radius: 3px; 
+        border-top-right-radius: 3px;
+
+        &--1 {
+            background-image:url("../Recursos/img/museo-prado.jpg");
+        }
+        &--2 {
+            background-image:url("../Recursos/img/museo-reina-sofia.jpg");
+        }
+
+        &--3 {
+            background-image:url("../Recursos/img/museo-thyssen.jpg");
+        }
+        &--4 {
+            background-image:url("../Recursos/img/Museo-Ciencias-Naturales.jpg");
+        }
+    }
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: left;
+        color: $color-white;
+        position: absolute;
+        top:25rem;
+        left: 2rem;
+        width: 95%;
+    }
+    &__heading-span {
+        padding: .3rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgb(247, 191, 223), rgb(250, 114, 51));
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgb(247, 191, 223), rgb(250, 114, 51));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgb(247, 191, 223), rgb(250, 114, 51));
+        }
+        &--4 {
+            background-image: linear-gradient(to right bottom, rgb(247, 191, 223), rgb(250, 114, 51));
+        }
+    }
+    &__details {
+        padding: 1rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto; 
+            margin-top: 7rem;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 0.75rem;
+
+                &:not(:last-child) {
+                    border-bottom: 2px solid rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%; //to fix the break on the botton
+        text-align: center;
+    }
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+}
+
