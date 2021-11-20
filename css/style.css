@@ -421,7 +421,7 @@ body {
   position: relative;
   background-color: #bdbdc0;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-  z-index: 1;
+  z-index: 10;
 }
 .header_cultura--text-box {
   position: absolute;
@@ -433,12 +433,14 @@ body {
 
 .museos {
   background-color: #ececec;
-  height: 100vh;
+  height: 110vh;
   position: relative;
   padding-left: 5rem;
   padding-right: 5rem;
   padding-top: 20rem;
   margin-top: -7rem;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  z-index: 9;
 }
 .museos--text-box {
   position: absolute;
@@ -457,13 +459,16 @@ body {
 }
 
 .parques {
-  height: 120vh;
+  height: 160vh;
   position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  margin-top: -13rem;
+  z-index: 8;
 }
 .parques--text-box {
   position: absolute;
   left: 50%;
-  top: 5rem;
+  top: 20rem;
   transform: translate(-50%, 0);
 }
 .parques_heading--primary {
@@ -478,18 +483,19 @@ body {
 .parques_contenido {
   padding-left: 5rem;
   padding-right: 5rem;
-  padding-top: 30rem;
+  padding-top: 45rem;
 }
 
 .otras_visitas {
   background-color: #ececec;
-  height: 200vh;
+  height: 270vh;
   position: relative;
   padding-left: 5rem;
   padding-right: 5rem;
-  padding-top: 25rem;
-  margin-top: 0;
+  padding-top: 75rem;
+  margin-top: -48rem;
   text-align: center;
+  clip-path: polygon(100% 15%, 100% 100%, 0 100%, 0 15%, 50% 24%);
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(216, 216, 216, 0.1)), url("../Recursos/img/fondo-otras-visitas.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -497,7 +503,7 @@ body {
 .otras_visitas--text-box {
   position: absolute;
   left: 50%;
-  top: 10rem;
+  top: 61rem;
   transform: translate(-50%, 0);
 }
 .otras_visitas_heading--primary {
