@@ -5,7 +5,7 @@
     background-size: cover; 
     background-position: top;
     position: relative;
-    background-color: rgb(189, 189, 192);
+    background-color: $color-grey;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
     z-index: 10;
 
@@ -20,11 +20,11 @@
   }
 
 .museos{
-    background-color: rgb(236, 236, 236);
+    background-color: $color-grey;
     height: 110vh;
     position: relative;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left:$padding;
+    padding-right:$padding;
     padding-top: 20rem;
     margin-top: -7rem;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%,0 85% );
@@ -73,24 +73,24 @@
         color: transparent;
     }
     &_contenido{
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding-left:$padding;
+        padding-right:$padding;
         padding-top: 45rem;
     }
 }
 
 .otras_visitas{
-    background-color: rgb(236, 236, 236);
-    height: 270vh;
+    background-color: $color-grey;
+    height: 250vh;
     position: relative;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left:$padding;
+    padding-right:$padding;
     padding-top: 75rem;
     margin-top: -48rem;
     text-align: center;
     clip-path: polygon(100% 15%, 100% 100%, 0 100%, 0 15%, 50% 24%);
 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(216, 216, 216, 0.1)),url("../Recursos/img/fondo-otras-visitas.jpeg");
+    background-image: linear-gradient(rgba($color-white, 0.5), rgba($color-grey, 0.1)),url("../Recursos/img/fondo-otras-visitas.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -98,7 +98,7 @@
     &--text-box{
         position: absolute;
         left: 50%;
-        top: 61rem;
+        top: 55rem;
         transform: translate(-50%, 0);
     }
     &_heading--primary{ 
@@ -115,6 +115,7 @@
         position: relative;
         border: 10px solid transparent;
         padding-top: 1rem;
+        margin-top: -5rem;
         transition: all .2s;
         height: 34rem;
 
@@ -188,14 +189,5 @@
         &:hover{
             transform: scale(1.1);
         }
-    }    
-    
-}
-
-.prueba{
-    max-width: 1000px;
-}
-.hola{
-    background-color: chartreuse;
-    z-index: 60;
+    }        
 }

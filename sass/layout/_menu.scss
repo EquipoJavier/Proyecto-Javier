@@ -4,7 +4,7 @@
     width: 20rem;
     margin-left: -16rem;
 
-    background-color: rgb(46, 44, 44);
+    background-color: $color-menu;
     top: 0rem;
     left: 0;
     z-index: 9000;
@@ -17,7 +17,7 @@
     } 
     &__tabla{
         position: absolute;
-        color: white;
+        color: $color-white;
         text-transform: uppercase;
         width: 100%;
         

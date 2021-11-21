@@ -93,7 +93,7 @@ body {
   position: relative;
   height: 40rem;
 }
-.cultura-museo__side {
+.cultura-museo__lado {
   height: 40rem;
   transition: all 0.8s ease;
   position: absolute;
@@ -105,31 +105,31 @@ body {
   overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
-.cultura-museo__side--front {
+.cultura-museo__lado--delante {
   background-color: black;
 }
-.cultura-museo__side--back {
+.cultura-museo__lado--detras {
   transform: rotateY(180deg);
 }
-.cultura-museo__side--back-1 {
+.cultura-museo__lado--detras-1 {
   background-image: linear-gradient(to right bottom, #f7bfdf, #fa7233);
 }
-.cultura-museo__side--back-2 {
+.cultura-museo__lado--detras-2 {
   background-image: linear-gradient(to right bottom, #f7bfdf, #fa7233);
 }
-.cultura-museo__side--back-3 {
+.cultura-museo__lado--detras-3 {
   background-image: linear-gradient(to right bottom, #f7bfdf, #fa7233);
 }
-.cultura-museo__side--back-4 {
+.cultura-museo__lado--detras-4 {
   background-image: linear-gradient(to right bottom, #f7bfdf, #fa7233);
 }
-.cultura-museo:hover .cultura-museo__side--front {
+.cultura-museo:hover .cultura-museo__lado--delante {
   transform: rotateY(-180deg);
 }
-.cultura-museo:hover .cultura-museo__side--back {
+.cultura-museo:hover .cultura-museo__lado--detras {
   transform: rotateY(0);
 }
-.cultura-museo__picture {
+.cultura-museo__imagen {
   background-size: cover;
   height: 30rem;
   background-blend-mode: screen;
@@ -137,16 +137,16 @@ body {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-.cultura-museo__picture--1 {
+.cultura-museo__imagen--1 {
   background-image: url("../Recursos/img/museo-prado.jpg");
 }
-.cultura-museo__picture--2 {
+.cultura-museo__imagen--2 {
   background-image: url("../Recursos/img/museo-reina-sofia.jpg");
 }
-.cultura-museo__picture--3 {
+.cultura-museo__imagen--3 {
   background-image: url("../Recursos/img/museo-thyssen.jpg");
 }
-.cultura-museo__picture--4 {
+.cultura-museo__imagen--4 {
   background-image: url("../Recursos/img/Museo-Ciencias-Naturales.jpg");
 }
 .cultura-museo__heading {
@@ -177,43 +177,30 @@ body {
 .cultura-museo__heading-span--4 {
   background-image: linear-gradient(to right bottom, #f7bfdf, #fa7233);
 }
-.cultura-museo__details {
-  padding: 1rem;
-}
-.cultura-museo__details ul {
-  list-style: none;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 7rem;
-}
-.cultura-museo__details ul li {
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 0.75rem;
-}
-.cultura-museo__details ul li:not(:last-child) {
-  border-bottom: 2px solid white;
-}
-.cultura-museo__cta {
+.cultura-museo__detalles {
   position: absolute;
+  padding: 1rem;
+  padding-bottom: 8rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   text-align: center;
-}
-.cultura-museo__price-box {
-  text-align: center;
   color: white;
-  margin-bottom: 8rem;
 }
-.cultura-museo__price-only {
-  font-size: 1.4rem;
-  text-transform: uppercase;
+.cultura-museo__detalles ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 7rem;
 }
-.cultura-museo__price-value {
-  font-size: 6rem;
-  font-weight: 100;
+.cultura-museo__detalles ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.75rem;
+}
+.cultura-museo__detalles ul li:not(:last-child) {
+  border-bottom: 2px solid white;
 }
 
 .parques_contenido__imagenes {
@@ -277,7 +264,7 @@ body {
   width: 100%;
   font-weight: 700;
   color: white;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(46, 44, 44, 0.9);
   border-radius: 0;
   transition: none;
   width: 100%;
@@ -432,7 +419,7 @@ body {
 }
 
 .museos {
-  background-color: #ececec;
+  background-color: #bdbdc0;
   height: 110vh;
   position: relative;
   padding-left: 5rem;
@@ -487,8 +474,8 @@ body {
 }
 
 .otras_visitas {
-  background-color: #ececec;
-  height: 270vh;
+  background-color: #bdbdc0;
+  height: 250vh;
   position: relative;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -496,14 +483,14 @@ body {
   margin-top: -48rem;
   text-align: center;
   clip-path: polygon(100% 15%, 100% 100%, 0 100%, 0 15%, 50% 24%);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(216, 216, 216, 0.1)), url("../Recursos/img/fondo-otras-visitas.jpeg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(189, 189, 192, 0.1)), url("../Recursos/img/fondo-otras-visitas.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .otras_visitas--text-box {
   position: absolute;
   left: 50%;
-  top: 61rem;
+  top: 55rem;
   transform: translate(-50%, 0);
 }
 .otras_visitas_heading--primary {
@@ -519,6 +506,7 @@ body {
   position: relative;
   border: 10px solid transparent;
   padding-top: 1rem;
+  margin-top: -5rem;
   transition: all 0.2s;
   height: 34rem;
 }
@@ -577,15 +565,6 @@ body {
 }
 .otras_visitas--imagenes:hover {
   transform: scale(1.1);
-}
-
-.prueba {
-  max-width: 1000px;
-}
-
-.hola {
-  background-color: chartreuse;
-  z-index: 60;
 }
 
 /*# sourceMappingURL=style.css.map */
