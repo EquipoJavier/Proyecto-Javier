@@ -17,3 +17,32 @@
     }   
   }
 
+.gastronomia {
+    background-color: rgb(221, 221, 221);
+    height: 100vh;
+    margin-top: -10rem;
+}
+
+.gastronomia__textbox {
+    padding-top: 12rem;
+    text-align: center;
+}
+
+.gastronomia__platos {
+    margin-top: 10rem;
+
+    & .test-col {
+        // border: 2px solid black;
+        text-align: center;
+        aspect-ratio: 1 / 1;
+        background-color: green;
+    }
+}
+
+.plato {
+    border: 3px solid black;
+    width: 100%;
+    height: 100%;
+    object-position: -10rem;
+    object-fit: cover;
+}
