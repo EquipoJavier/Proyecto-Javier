@@ -6,12 +6,33 @@
         clear: both;
     }
 }
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
 @mixin colwidth {
     @for $size from 1 through $cols {
         @for $length from $size through $cols {
             @if $size !=$length or $size==1 {
                 .col-#{$size}-of-#{$length} {
                     width: calc-col-width($size, $length);
+                }
+            }
+        }
+    }
+}
+
+@mixin gastrColwidth {
+    @for $size from 1 through $cols {
+        @for $length from $size through $cols {
+            @if $size !=$length or $size==1 {
+                .col-#{$size}-of-#{$length} {
+                    width: calc-gastrCol-width($size, $length);
                 }
             }
         }

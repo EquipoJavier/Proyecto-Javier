@@ -3,6 +3,9 @@
 
     @return calc(#{$width});
 }
-/*
-$size = 
-*/
+
+@function calc-gastrCol-width($size, $length) {
+    $width: "#{$size} * ((100% - (#{$length} - 1) * #{$gastr-gutter-horizontal}) / #{$length}) + (#{$size} - 1) * #{$gastr-gutter-horizontal}";
+
+    @return calc(#{$width});
+}

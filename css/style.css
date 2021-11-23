@@ -1,6 +1,3 @@
-/*
-$size = 
-*/
 @keyframes moveInLeft {
   0% {
     transform: translate(-10rem);
@@ -29,6 +26,11 @@ body {
   box-sizing: border-box;
   background-color: white;
   padding-left: 4rem;
+}
+
+.link--noDecor {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -121,6 +123,58 @@ body {
 }
 .row [class^=col-]:not(:last-child) {
   margin-right: 6rem;
+}
+
+.row--gastronomia {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+.row--gastronomia:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row--gastronomia:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row--gastronomia .col-1-of-1 {
+  width: calc(1 * ((100% - (1 - 1) * 10rem) / 1) + (1 - 1) * 10rem);
+}
+.row--gastronomia .col-1-of-2 {
+  width: calc(1 * ((100% - (2 - 1) * 10rem) / 2) + (1 - 1) * 10rem);
+}
+.row--gastronomia .col-1-of-3 {
+  width: calc(1 * ((100% - (3 - 1) * 10rem) / 3) + (1 - 1) * 10rem);
+}
+.row--gastronomia .col-1-of-4 {
+  width: calc(1 * ((100% - (4 - 1) * 10rem) / 4) + (1 - 1) * 10rem);
+}
+.row--gastronomia .col-1-of-5 {
+  width: calc(1 * ((100% - (5 - 1) * 10rem) / 5) + (1 - 1) * 10rem);
+}
+.row--gastronomia .col-2-of-3 {
+  width: calc(2 * ((100% - (3 - 1) * 10rem) / 3) + (2 - 1) * 10rem);
+}
+.row--gastronomia .col-2-of-4 {
+  width: calc(2 * ((100% - (4 - 1) * 10rem) / 4) + (2 - 1) * 10rem);
+}
+.row--gastronomia .col-2-of-5 {
+  width: calc(2 * ((100% - (5 - 1) * 10rem) / 5) + (2 - 1) * 10rem);
+}
+.row--gastronomia .col-3-of-4 {
+  width: calc(3 * ((100% - (4 - 1) * 10rem) / 4) + (3 - 1) * 10rem);
+}
+.row--gastronomia .col-3-of-5 {
+  width: calc(3 * ((100% - (5 - 1) * 10rem) / 5) + (3 - 1) * 10rem);
+}
+.row--gastronomia .col-4-of-5 {
+  width: calc(4 * ((100% - (5 - 1) * 10rem) / 5) + (4 - 1) * 10rem);
+}
+.row--gastronomia [class^=col-] {
+  float: left;
+}
+.row--gastronomia [class^=col-]:not(:last-child) {
+  margin-right: 10rem;
 }
 
 .header_index {
@@ -252,18 +306,92 @@ body {
 .gastronomia__platos {
   margin-top: 10rem;
 }
-.gastronomia__platos .test-col {
-  text-align: center;
-  aspect-ratio: 1/1;
-  background-color: green;
-}
 
 .plato {
+  aspect-ratio: 1/1;
+  position: relative;
+}
+.plato .plato__img {
   border: 3px solid black;
   width: 100%;
   height: 100%;
-  object-position: -10rem;
   object-fit: cover;
+  transition: all 0.3s;
+}
+.plato__caption {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  line-height: 5rem;
+  background-color: rgba(192, 192, 192, 0.527);
+  padding: 1rem;
+  letter-spacing: 0.5rem;
+  font-size: 3rem;
+  transform: translate(-50%, -20%);
+  transition: all 0.3s;
+  opacity: 0;
+}
+.plato:hover .plato__img {
+  transform: scale(1.1);
+  filter: blur(1px) brightness(60%);
+}
+.plato:hover .plato__caption {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+.plato--cocido {
+  object-position: -10rem;
+}
+.plato--callos {
+  object-position: -3rem;
+}
+.plato--calamares {
+  object-position: -1rem;
+}
+.plato--besugo {
+  object-position: -7rem;
+}
+.plato--churros {
+  object-position: -3rem;
+}
+
+.gastronomia__popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.gastronomia__popup__contenido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 80%;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transform: translate -50%, -50% scale(0.1);
+  transition: all 0.5s 0.2s;
+  opacity: 0;
+}
+.gastronomia__popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.gastronomia__popup:target .gastronomia__popup__contenido {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */

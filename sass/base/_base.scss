@@ -17,3 +17,8 @@ body {
     background-color: $color-white;
     padding-left: 4rem;
 }
+
+.link--noDecor {
+    text-decoration: none;
+    color: inherit;
+}
