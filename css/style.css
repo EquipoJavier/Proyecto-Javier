@@ -28,7 +28,7 @@ body {
   padding-left: 4rem;
 }
 
-.link--noDecor {
+.noDecor, .noDecor:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -58,6 +58,27 @@ body {
 
 .header_index--text-box {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.boton--gastr {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: indianred;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  border-radius: 3rem;
+  transition: all 0.3s 0.2s;
+}
+.boton--gastr:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+.boton--gastr:active {
+  transform: translateX(-50%) scale(0.9);
 }
 
 .foot {
@@ -284,13 +305,6 @@ body {
   background-color: #bdbdc0;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
 }
-.header__gastronomia--text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 
 .gastronomia {
   background-color: #dddddd;
@@ -301,6 +315,16 @@ body {
 .gastronomia__textbox {
   padding-top: 12rem;
   text-align: center;
+  transform: translateY(-50%);
+}
+.gastronomia__textbox--heading {
+  font-size: 4rem;
+  text-transform: uppercase;
+  display: inline-block;
+  background-image: linear-gradient(to right, #8f1c0c, #7c7c7c);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 1rem;
 }
 
 .gastronomia__platos {
@@ -381,9 +405,11 @@ body {
   width: 80%;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  transform: translate -50%, -50% scale(0.1);
-  transition: all 0.5s 0.2s;
-  opacity: 0;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0.25);
+  transition: all 0.3s 0.2s;
+  display: table;
+  overflow: hidden;
 }
 .gastronomia__popup:target {
   opacity: 1;
@@ -392,6 +418,22 @@ body {
 .gastronomia__popup:target .gastronomia__popup__contenido {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+}
+.gastronomia__popup__izq {
+  display: table-cell;
+  width: 33.3333%;
+}
+.gastronomia__popup__der {
+  position: relative;
+  display: table-cell;
+  width: 66.6667%;
+  vertical-align: top;
+  padding: 4rem;
+  line-height: 2.2rem;
+}
+.gastronomia__popup__img {
+  width: 100%;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,14 +7,6 @@
     position: relative;
     background-color: rgb(189, 189, 192);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-
-    &--text-box {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); 
-        text-align: center; 
-    }   
   }
 
 .gastronomia {
@@ -26,6 +18,17 @@
 .gastronomia__textbox {
     padding-top: 12rem;
     text-align: center;
+    transform: translateY(-50%);
+
+    &--heading {
+        font-size: 4rem;
+        text-transform: uppercase;
+        display: inline-block;
+        background-image: linear-gradient(to right, rgb(143, 28, 12), rgb(124, 124, 124));
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: 1rem;
+    }
 }
 
 .gastronomia__platos {
@@ -116,9 +119,11 @@
         width: 80%;
         box-shadow: 0 2rem 4rem rgba(black, 0.2);
         border-radius: 5px;
-        transform: translate (-50%, -50%) scale(0.1);
-        transition: all 0.5s 0.2s;
-        opacity: 0;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.25);
+        transition: all 0.3s 0.2s;
+        display: table;
+        overflow: hidden;
     }
 
     &:target {
@@ -129,5 +134,24 @@
     &:target &__contenido {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
+    }
+    
+    &__izq {
+        display: table-cell;
+        width: 33.3333%;
+    }
+
+    &__der {
+        position: relative;
+        display: table-cell;
+        width: 66.6667%;
+        vertical-align: top;
+        padding: 4rem;
+        line-height: 2.2rem;
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
     }
 }
