@@ -1,4 +1,3 @@
-// Aquí meter sólo @import de otros archivos scss
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
@@ -8,13 +7,23 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/bg-video";
+@import "components/book";
 @import "components/button";
+@import "components/card";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/form";
+@import "components/popup";
+@import "components/story";
 
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/menu";
+@import "layout/navigation";
 
 @import "pages/cultura";
 @import "pages/gastronomia";
 @import "pages/home";
+@import "pages/transporte";
