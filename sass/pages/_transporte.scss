@@ -1,0 +1,76 @@
+.header_transporte {
+  background-color: rgb(236, 236, 236);
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(7, 7, 7, 0.8)
+    ),
+    url("../../Recursos/img/head_transporte.jpg");
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
+  &--text-box {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 0);
+    color: rgba(255, 255, 255, 0.747);
+    text-shadow: 0 0 2px rgb(0, 0, 129);
+  }
+
+  &-text {
+    padding: 10% 0;
+    font-size: 68px;
+    text-transform: uppercase;
+    position: relative;
+    animation-name: moveToRight;
+    animation-duration: 2s;
+
+    & p {
+      height: 47px;
+      line-height: 42px;
+      padding: 0 10px;
+      transition: all 0.4s ease-in-out;
+      transform: translate3d(0, 0, 0);
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    &--line {
+      height: 7.4vh;
+      overflow: hidden;
+      position: relative;
+
+      &:nth-child(odd) {
+        transform: skew(60deg, -30deg) scaleY(0.66667);
+      }
+      &:nth-child(even) {
+        transform: skew(0deg, -30deg) scaleY(1.33333);
+      }
+
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          left: 29px * $i;
+        }
+      }
+    }
+
+    &:hover {
+      p {
+        color: rgba(0, 0, 143, 0.671);
+        text-shadow: 0 0 40px rgb(0, 0, 0);
+        transform: translate3d(0, -(47px), 0);
+      }
+    }
+  }
+}
+
+.section-transport_voucher{
+position: relative;
+text-align: center;
+margin: 0 auto;
+}
+
+
