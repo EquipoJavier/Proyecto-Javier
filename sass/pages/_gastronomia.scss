@@ -6,21 +6,47 @@
     background-position: top;
     position: relative;
     background-color: rgb(189, 189, 192);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0 100%);
+
+    @include respond(wide-tab) {
+        & .heading_index-primary--main {
+            letter-spacing: 3.5rem;
+            font-size: 6rem;
+        }
+    }
+
+    @include respond(tab-port) {
+        & .heading_index-primary--main {
+            letter-spacing: 2.5rem;
+            font-size: 5rem;
+        }
+    }
+
+    @media (max-width: 700px) {
+        & .heading_index-primary--main {
+            letter-spacing: 1.5rem;
+            font-size: 4rem;
+            padding-left: 1rem;
+        }
+    }
   }
 
 .gastronomia {
     background-color: rgb(221, 221, 221);
-    height: 100vh;
+    // height: 100vh;
     margin-top: -10rem;
 }
 
 .gastronomia__textbox {
-    padding-top: 12rem;
+    padding-top: 10rem;
     text-align: center;
-    transform: translateY(-50%);
+    
+    animation-name: moveInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 
     &--heading {
+        text-decoration: underline;
         font-size: 4rem;
         text-transform: uppercase;
         display: inline-block;
@@ -28,11 +54,89 @@
         -webkit-background-clip: text;
         color: transparent;
         letter-spacing: 1rem;
+        cursor: default;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    
+        &.secondary {
+            background-image: linear-gradient(to right, rgb(124, 124, 124), rgb(92, 71, 12));
+        }
     }
+}
+
+.gastronomia__intro {
+    background-color: rgb(107, 19, 8);
+    color: silver;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 80vw;
+    margin: 5rem auto;
+    overflow: auto;
+    position: relative;
+    clip-path: polygon(0% 15%, 3.5% 0%, 96.5% 0%, 100% 15%, 100% 85%, 96.5% 100%, 3.5% 100%, 0% 85%);
+
+    animation-name: invisibleToLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    & img {
+        width: 20%;
+        clip-path: ellipse(100% 100% at 0% 0%);
+        shape-outside: ellipse(100% 100% at 0% 0%);
+        float: left;
+        margin-right: 3rem;
+    }
+
+    &__text {
+        font-size: 2.4rem;
+        padding: 4rem;
+        line-height: 4rem;
+
+        & p:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        & p:last-child {
+            margin-top: 3rem;
+            text-align: center;
+        }
+    }
+
+    @include respond(wide-tab) {
+        & img {
+            width: 40%;
+        }
+    }
+    @include respond(tab-port) {
+        & img {
+            width: 110%;
+            height: 25rem;
+            float: right;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+            transform: translateX(5rem);
+            object-fit: cover;
+            object-position: 50% 20%;
+        }
+
+        &__text {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+    }
+    @include respond(phone) {
+        &__text {
+            font-size: 1.7rem;
+            line-height: 2.5rem;
+        }
+    }
+    
 }
 
 .gastronomia__platos {
     margin-top: 10rem;
+    padding-bottom: 10rem;
 }
 
     .plato {
@@ -148,6 +252,7 @@
         vertical-align: top;
         padding: 4rem;
         line-height: 2.2rem;
+        font-size: 1.9rem;
     }
 
     &__img {
@@ -155,3 +260,115 @@
         display: block;
     }
 }
+
+.restaurantes {
+    background-color: rgb(107, 19, 8);
+    padding-bottom: 20rem;
+    clip-path: polygon(0% 10rem, 50% 0%, 100% 10rem, 100% 100%, 0% 100%);
+
+    & .restaurantes__intro {
+        padding: 5rem;
+        font-size: 3rem;
+        text-align: center;
+        color: silver;
+        transition: all 0.2s;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__tabla {
+       // background-color: azure;
+        margin: 0 auto;
+        &--tb { 
+            margin: 0 auto;
+            border-spacing: 15rem 5rem;
+            & td {
+                width: 55rem;
+            }
+
+            @include respond(wide-tab) {
+                border-spacing: 10rem 5rem;
+            }
+
+            @include respond(tab-land) {
+                border-spacing: 5rem;
+            }
+            
+            @media (max-width: 1050px) {
+                & tr {
+                    display: table;
+                    width: 60rem;
+                }
+                & td {
+                    display: table-row;
+                }
+            }
+        }
+    }
+
+    &__img {
+        aspect-ratio: 1/1;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-position: center;
+            transition: all 0.5s;
+        }
+
+        &:hover .restaurantes__background {
+            top: -20%;
+        }
+
+        &:hover img {
+            filter: blur(10px) brightness(80%);
+        }
+    }
+
+    &__background {
+        width: 100%;
+        height: 120%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: silver;
+        opacity: 0.8;
+        clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 100%, 0 100%);
+        transition: all 0.5s;
+
+        &--text {
+            width: 100%;
+            aspect-ratio: 1/1;
+            position: absolute;
+            bottom: 0;
+            padding: 2rem;
+        }
+        
+        &--name {
+            width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            background-image: linear-gradient(to right, rgb(201, 48, 27), rgb(82, 13, 13));
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 3rem;
+            letter-spacing: 0.7rem;
+            cursor: default;
+        }
+    
+        &--description {
+            margin-top: 2rem;
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+

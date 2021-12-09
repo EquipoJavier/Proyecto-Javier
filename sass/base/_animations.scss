@@ -21,3 +21,39 @@
         left: 0;
     }
 }
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes invisibleToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%)
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
