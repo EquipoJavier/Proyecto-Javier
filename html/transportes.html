@@ -11,42 +11,45 @@
 </head>
 
 <body>
+    <a href="#header__transporte">
+        <div class="btn__subir"><img src="../Recursos/img/flecha-hacia-arriba.png" alt=""></div>
+    </a>
     <aside class="menu">
         <table class="menu__tabla">
             <tr>
-                <td>Gastronomia</td>
+                <td><a style="text-decoration: none; color: white;" href="../index.html">Inicio</a></td>
+              </tr>
+            <tr>
+                <td><a style="text-decoration: none; color: white;" href="gastronomia.html">Gastronomia</a></td>
             </tr>
             <tr>
-                <td>Cultura</td>
+                <td><a style="text-decoration: none; color: white;" href="cultura.html">Cultura</a></td>
             </tr>
             <tr>
-                <td>Que hacer</td>
+                <td><a style="text-decoration: none; color: white;" href="ocio.html">Ocio</a></td>
             </tr>
-            <tr>
+            <tr style="background-color: grey;">
                 <td>Transporte</td>
-            </tr>
-            <tr>
-                <td>Contactanos</td>
             </tr>
         </table>
     </aside>
 
-    <section class="header_transporte">
-        <div class="header_transporte--text-box">
-            <ul class="header_transporte-text">
-                <li class="header_transporte-text--line">
+    <section class="header__transporte" id="header__transporte">
+        <div class="header__transporte--text-box">
+            <ul class="header__transporte-text">
+                <li class="header__transporte-text--line">
                     <p>&nbsp;</p>
                     <p>Transporte</p>
                 </li>
-                <li class="header_transporte-text--line">
+                <li class="header__transporte-text--line">
                     <p>Transporte</p>
                     <p>De</p>
                 </li>
-                <li class="header_transporte-text--line">
+                <li class="header__transporte-text--line">
                     <p>De</p>
                     <p>Madrid</p>
                 </li>
-                <li class="header_transporte-text--line">
+                <li class="header__transporte-text--line">
                     <p>Madrid</p>
                     <p>&nbsp;</p>
                 </li>
@@ -55,54 +58,191 @@
     </section>
 
     <main>
-        <section class="section-transport_voucher">
-            <div class="u-center-text u-margin-bottom-big">
-                <h1>Así se desplazan económicamente los madrileños</h1>
-            </div>
-            <div class="row">
+        <section class="section__location" id="section__location">
+            <h1 class="section__location--title">Cónoce como desplazarte</h1>
+            <div class="row--transporte">
                 <div class="col-1-of-2">
-                    <h2>Bono</h2>
-                    <div class="transporte_card">
-                        <div class="transporte_card--front">
+                    <iframe class="section__location--map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.9504287855007!2d-3.8622450572875957!3d40.47636166710345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41846582414961%3A0xb7de74e24489f270!2sInstituto%20de%20Formaci%C3%B3n%20Profesional%20Mar%C3%ADa%20de%20Zayas%20y%20Sotomayor!5e0!3m2!1ses!2ses!4v1638628460724!5m2!1ses!2ses"
+                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-1-of-2">
+                    <ul class="section__location--ul">
+                        <img class="section__location--ul-subtitle"
+                            src="../Recursos/img/elige_tu_transporte_publico.gif" alt="">
+                        <a href="#choose__transport"><li class="section__location--ul-icon">
+                            <img src="../Recursos/img/metro_xl.gif" alt="">
+                        </li></a>
+                        <a href="#choose__transport"><li class="section__location--ul-icon">
+                            <img src="../Recursos/img/emt_xl.gif" alt="">
+                        </li></a>
+                        <a href="#choose__transport"><li class="section__location--ul-icon">
+                            <img src="../Recursos/img/interurbanos_cm_xl.gif" alt="">
+                        </li></a>
+                        <a href="#choose__transport"><li class="section__location--ul-icon">
+                            <img src="../Recursos/img/metroligero_xl.gif" alt="">
+                        </li></a>
+                        <a href="#choose__transport"><li class="section__location--ul-icon">
+                            <img src="../Recursos/img/cercanias_xl.gif" alt="">
+                        </li></a>
+                    </ul>
+                </div>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat eligendi, est explicabo cupiditate quo animi dolore amet architecto quia debitis voluptate voluptas, officiis magnam consectetur iusto, unde consequatur voluptates suscipit.
+            Nostrum aliquid exercitationem non cumque, nemo, perferendis quibusdam placeat inventore molestiae expedita voluptate. Modi distinctio tempora ex earum rem, dolore natus rerum quo labore! Repudiandae est tenetur magnam rem totam?</p>
+        </section>
+        <section class="section__transportVoucher">
+            <h1>Así se desplazan económicamente los madrileños</h1>
+            <div class="row--transporte">
+                <div class="col-1-of-3">
+                    <div class="card--transporte card--transporte-medias">
+                        <div class="card--transporte__side card--transporte__side--front">
                             <img src="../Recursos/img/bono_maria_delante.jpg" alt="">
                         </div>
-                        <div class="transporte_card--back">
+                        <div
+                            class="card--transporte__side card--transporte__side--back card--transporte__side card--transporte__side--back-1">
                             <img src="../Recursos/img/bono_maria_detras.jpg" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-1-of-2">
-                    <h2>Azul</h2>
-                    <div class="transporte_card">
-                        <div class="transporte_card--front">
+
+                <div class="col-1-of-3">
+                    <div class="card--transporte card--transporte-medias">
+                        <div class="card--transporte__side card--transporte__side--front">
                             <img src="../Recursos/img/tarjeta_azul_delante.jpg" alt="">
                         </div>
-                        <div class="transporte_card--back">
+                        <div
+                            class="card--transporte__side card--transporte__side--back card--transporte__side card--transporte__side--back-1">
                             <img src="../Recursos/img/tarjeta_azul_maria_detras.jpg" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-1-of-2">
-                    <h2>Viajes</h2>
-                    <div class="transporte_card">
-                        <div class="transporte_card--front">
+                <div class="col-1-of-3">
+                    <div class="card--transporte card--transporte-medias">
+                        <div class="card--transporte__side card--transporte__side--front">
                             <img src="../Recursos/img/bono_maria_delante.jpg" alt="">
                         </div>
-                        <div class="transporte_card--back">
+                        <div
+                            class="card--transporte__side card--transporte__side--back card--transporte__side card--transporte__side--back-1">
                             <img src="../Recursos/img/tarjeta_multi.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
         </section>
 
-    </main>
+        <section class="section__allTransports">
+            <h1>¡Desplázate, ahorra, visita!</h1>
+            <div class="row--transporte section__allTransports_bus">
+                <div class="section__allTransports_bus--img">
+                    <img src="../Recursos/img/autobus.png" alt="">
+                </div>
+            </div>
+            <h4>Los autobuses interurbanos de la Comunidad de Madrid, también conocidos como los autobuses verdes de
+                Madrid, conectan distintos municipios de la región entre sí y con la capital; las líneas son gestionadas
+                por diferentes empresas de transporte y para viajar en estos autobuses se pueden utilizar billetes
+                sencillos que se compran en el mismo autobús, bonos de 10 viajes que se venden en quioscos, o el abono
+                transporte mensual o anual que se puede adquirir también en quioscos o por Internet, así como los abonos
+                especiales para turistas.
+                Además de los autobuses interurbanos, también puedes consultar los horarios de otros tipos de autobús en
+                Madrid y resto de municipios de la Comunidad de Madrid.
+                La red de líneas de autobuses interurbanos transporta diariamente a más de 800.000 personas.
 
-    <footer class="foot">
-        <p> Conoce Madrid | Tel: +34 123 321 213 | Email: proyectojavier4@gmail.com</p>
-        <p>Copyright 2021 <span style="color: #836970;">Web</span></p>
-    </footer>
+               </h4>
+        </section>
+
+        <br><br>
+        <section class="choose__transport" id="choose__transport">
+            <h1>¡Elige tu transporte e infórmate!</h1>
+            <div class="row--transporte choose__transport_options">
+                <a href="#popup_metro">
+                    <div class="col-1-of-3 choose__transport_options--option">
+                        <img src="../Recursos/img/metro_xl.gif" alt="">
+                        <h2>Metro Madrid</h2>
+                    </div>
+                </a>
+                <div id="popup_metro" class="popup--transporte">
+                    <div class="popup--transporte__body">
+                        <h2>Mapa del Metro de Madrid</h2>
+                        <br><br>
+                        <a class="popup--transporte__close" href="#choose__transport">&times;</a>
+                        <div class="popup--transporte__content">
+                            <iframe src="https://www.metromadrid.es/sites/default/files/web/planos/Plano_base_cartografica_junio_2020.pdf" width="600vw" height="350vh" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <a href="#popup_emt">
+                    <div class="col-1-of-3 choose__transport_options--option">
+                        <img src="../Recursos/img/emt_xl.gif" alt="">
+                        <h2>Líneas EMT</h2>
+                    </div>
+                </a>
+                <div id="popup_emt" class="popup--transporte">
+                    <div class="popup--transporte__body">
+                        <h2>Mapa a tiempo real de autobúses EMT</h2>
+                        <br><br>
+                        <a class="popup--transporte__close" href="#choose__transport">&times;</a>
+                        <div class="popup--transporte__content">
+                            <iframe src="https://navegapormadrid.emtmadrid.es/app/" width="600vw" height="350vh" style="border:0; margin-left: 5%; margin-bottom: 3%;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <a href="#popup_inter">
+                    <div class="col-1-of-3 choose__transport_options--option">
+                        <img src="../Recursos/img/interurbanos_cm_xl.gif" alt="">
+                        <h2>Líneas Inter</h2>
+                    </div>
+                </a>
+                <div id="popup_inter" class="popup--transporte">
+                    <div class="popup--transporte__body">
+                        <h2>Mapa a tiempo real de autobúses interurbanos</h2>
+                        <br><br>
+                        <a class="popup--transporte__close" href="#choose__transport">&times;</a>
+                        <div class="popup--transporte__content">
+                            <iframe src="https://crtm.maps.arcgis.com/apps/Embed/index.html?webmap=f3176125b9de4d6f9ed9a867284f544f&extent=-5.7391,39.4841,-1.6824,41.239&home=true&zoom=true&scale=true&search=true&searchextent=true&legend=true&basemap_gallery=true&disable_scroll=false&theme=light" width="600vw" height="350vh" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row--transporte choose__transport_options">
+                <a href="#popup_m_ligero">
+                    <div class="col-1-of-2 choose__transport_options--option">
+                        <img src="../Recursos/img/metroligero_xl.gif" alt="">
+                        <h2>Metro Ligero</h2>
+                    </div>
+                </a>
+                <div id="popup_m_ligero" class="popup--transporte">
+                    <div class="popup--transporte__body">
+                        <h2>Mapa del metro ligero</h2>
+                        <br><br>
+                        <a class="popup--transporte__close" href="#choose__transport">&times;</a>
+                        <div class="popup--transporte__content">
+                            <iframe src="https://www.metromadrid.es/sites/default/files/web/planos/MetroLigeroesp.pdf" width="600vw" height="350vh" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <a href="#popup_cerca">
+                    <div class="col-1-of-2 choose__transport_options--option">
+                        <img src="../Recursos/img/cercanias_xl.gif" alt="">
+                        <h2>Cercanías</h2>
+                    </div>
+                </a>
+                <div id="popup_cerca" class="popup--transporte">
+                    <div class="popup--transporte__body">
+                        <h2>Mapa del Cercanías</h2>
+                        <br><br>
+                        <a class="popup--transporte__close" href="#choose__transport">&times;</a>
+                        <div class="popup--transporte__content">
+                            <iframe src="https://www.crtm.es/media/393460/cercanias.pdf" width="600vw" height="350vh" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>               
+        </section>
+
+        <footer class="foot">
+            <p> Conoce Madrid | Tel: +34 123 321 213 | Email: proyectojavier4@gmail.com</p>
+            <p>Copyright 2021 <span style="color: #836970;">Web</span></p>
+        </footer>
 </body>
 
 </html>
