@@ -7,13 +7,6 @@
   }
 }
 
-@mixin absCenter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 @mixin colwidth {
   @for $size from 1 through $cols {
     @for $length from $size through $cols {
@@ -62,6 +55,11 @@
       @content;
     } //600px
   }  
+  @if $breakpoint == bigger-phone {
+    @media only screen and (max-width: 43.75em) {
+      @content;
+    } //700px
+  }
   @if $breakpoint == bigger-phone {
     @media only screen and (max-width: 43.75em) {
       @content;

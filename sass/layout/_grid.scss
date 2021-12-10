@@ -1,5 +1,5 @@
 .row--transporte{
-    max-width: $grid-width; // different than width
+    max-width: $grid-width-tr; // different than width
     margin: 0 auto; // trick to center block element inside of another block elements. auto value results in a margin of the same size left and right 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
