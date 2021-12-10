@@ -1,0 +1,29 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/card";
+@import "components/popup";
+@import "components/story";
+
+@import "layout/carrousel";
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/menu";
+@import "layout/rombos";
+
+@import "pages/cultura";
+@import "pages/gastronomia";
+@import "pages/home";
+@import "pages/ocio";
+@import "pages/transporte";
+
+
+

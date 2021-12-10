@@ -1,0 +1,365 @@
+.header__transporte {
+  background-color: rgb(236, 236, 236);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(7, 7, 7, 0.8)
+    ),
+    url("../../Recursos/img/head_transporte.jpg");
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
+  &--text-box {
+    position: absolute;
+    left: 45%;
+    top: 20%;
+    transform: translate(-50%, 0);
+    color: rgba(255, 255, 255, 0.747);
+    text-shadow: 0 0 2px rgb(0, 0, 129);
+  }
+
+  &-text {
+    padding: 10% 0;
+    font-size: 68px;
+    text-transform: uppercase;
+    position: relative;
+    animation-name: moveToRight;
+    animation-duration: 2s;
+
+    & p {
+      height: 47px;
+      line-height: 42px;
+      padding: 0 10px;
+      transition: all 0.4s ease-in-out;
+      transform: translate3d(0, 0, 0);
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    &--line {
+      height: 7.4vh;
+      overflow: hidden;
+      position: relative;
+
+      &:nth-child(odd) {
+        transform: skew(60deg, -26deg) scaleY(0.66667);
+      }
+      &:nth-child(even) {
+        transform: skew(0deg, -26deg) scaleY(1.33333);
+      }
+
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          left: 29px * $i;
+        }
+      }
+    }
+
+    &:hover {
+      p {
+        color: rgba(0, 0, 143, 0.671);
+        text-shadow: 0 0 40px rgb(0, 0, 0);
+        transform: translate3d(0, -(47px), 0);
+      }
+    }
+  }
+}
+
+.section__location {
+
+  height: 90vh;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  margin-top: 5vh;
+
+  &--title {
+    width: 60vh;
+    margin: 0 auto;
+    padding-top: 3vh;
+    padding-bottom: 10vh;
+    animation-name: moveConstantTitle;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  &--map {
+    width: 35vw;
+    height: 45vh;
+  }
+
+  &--ul {
+    transform: translateY(-30vh);
+    list-style: none;
+
+    &-subtitle {
+      margin-top: 9vh;
+      transform: translateX(32.5vh) rotateZ(90deg);
+      margin-bottom: -9vh;
+    }
+
+    &-icon {
+      display: inline-block;
+      margin-right: 2vw;
+      cursor: pointer;
+      margin-bottom: 3vh;
+
+      &:hover {
+        animation-name: rotateIcons;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  & p{
+    width: 35vw;
+    float: right;
+    margin-right: 8vw;
+    text-align: justify;
+    transform: translateY(-42vh);
+  }
+}
+
+.section__transportVoucher {
+
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  height: 100vh;
+  width: 100vw;
+  padding-top: 30vh;
+  transform: translateY(-10vh);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(128, 128, 128, 0.904),
+      rgba(255, 255, 255, 0.8),
+      rgba(128, 128, 128, 0.904)
+    ),
+    url("../../Recursos/img/mapa-metro-fondo.png");
+  background-size: cover;
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 8vh;
+    font-size: 30px;
+    transform: translateY(-5vh);
+    text-decoration: underline;
+    text-shadow: 4px 4px 6px rgba(78, 78, 78, 0.842);
+  }
+}
+
+.section__allTransports {
+  height: 100vh;
+width: 100vw;
+  & h1 {
+    text-align: center;
+    text-decoration: underline overline;
+    text-shadow: 4px 4px 5px rgba(82, 82, 82, 0.842);
+    letter-spacing: 1vw;
+    transform: translateY(-7vh) skewX(-15deg) rotateZ(2.7deg);
+  }
+
+  & h4 {
+    position: relative;
+    margin: 5vw;
+    transform: translateY(-42vh) rotateX(-60deg);
+    z-index: -1;
+  }
+
+  &_bus {
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+    height: 70vh;
+    position: relative;
+    &--img img {
+      float: right;
+      width: 70rem;
+      height: 50vh;
+      margin-right: 5rem;
+    }
+
+    &:hover {
+      transition: ease-in-out;
+      animation-name: moveIcons;
+      animation-duration: 4s;
+    }
+  }
+}
+
+.choose__transport {
+  margin-top: -20vh;
+  height: 150vh;
+
+
+  &_options {
+    text-align: center;
+
+    &--option {
+      border-radius: 10px;
+      padding: 5rem;
+      margin: 1.5rem;
+      display: block;
+      margin-bottom: 10vh;
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+
+      & h2 {
+        margin-top: 12vh;
+        text-align: center;
+        text-decoration: underline overline;
+        text-shadow: 4px 4px 5px rgba(82, 82, 82, 0.842);
+        letter-spacing: 0.6vw;
+        transform: translateY(-7vh) skewX(-15deg) rotateZ(2.7deg);
+        color: $color-black;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(92, 92, 92, 0.295),
+          rgb(255, 255, 255),
+          rgba(92, 92, 92, 0.295)
+        );
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 8vh;
+    font-size: 30px;
+    transform: translateY(-5vh);
+    text-shadow: 4px 4px 6px rgba(78, 78, 78, 0.842);
+  }
+}
+
+
+
+@include respond(tab-port) {
+  .header__transporte {
+      &-text {
+        font-size: 60px;
+      }
+    }
+
+  .section__location{
+      height: 160vh;
+      &--title {
+          margin-right: 13vw;
+          font-size: 20px;
+          width: 50vw;
+      }
+      &--map{
+          margin:auto;
+          padding-left: 10rem;
+          width: 80vw;
+      }
+      &--ul {
+          &-subtitle {
+              margin-top: 60vh;
+              width: 4vw;
+              transform: translateX(-17vh) rotateZ(90deg);
+              margin-bottom: -18vh;
+            }
+            &-icon {
+              display: block;
+              margin-left: 30vw;
+            }
+      }
+      & p{
+          transform: translateY(-90vh);
+          width: 50vw;
+          float: left;
+          margin-left: 21vw;
+        }
+  }
+
+  .section__transportVoucher {
+    height: 65vh;
+    
+      & h1 {
+        float: right;
+        margin: 0 auto;
+        margin-right: 18vw;
+        font-size: 20px;
+        transform: translateY(-24vw);
+      }
+
+      & > *{
+        transform: translateY(-18vw);
+
+      }
+    }
+  
+    .section__allTransports {
+      height: 70vh;
+      & h1 {
+        transform: translateY(-17vw) skewX(-15deg) rotateZ(2.7deg);
+      }
+    
+      & h4 {
+        position: absolute;
+        margin: 0 auto;
+        padding-left: 5vw;
+        font-size: 1.20rem;
+        z-index: -1;
+        transform: translateY(-100vh)  rotateX(-40deg);
+      }
+    
+      &_bus {
+        transform: translateY(-10vw);
+        clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        &--img img{
+          height: 20rem;
+          width: 50rem;
+          margin-right: 5rem;
+        }
+        
+      }
+    }
+
+    .choose__transport {
+      margin-top: -25vw;
+      height: 130vh;
+      margin-left: 10vw;
+      margin-right: -10vw;
+    
+      &_options {
+        text-align: center;
+        
+        &--option {
+    
+          & h2 {
+            margin-top: 12vh; 
+            text-align: none;
+            margin-left: -2vw;
+            text-decoration: underline ;
+            text-shadow: 4px 4px 5px rgba(82, 82, 82, 0.842);
+            letter-spacing: 0.1vw;
+            transform: translateY(-5vh) skewX(-15deg) rotateZ(2.7deg);
+            color: $color-black;
+            font-size: 20px;
+          }
+        }
+      }
+    
+      & h1 {
+        text-align: center;
+        margin: 8vh auto;
+        font-size: 20px;
+        transform: translateY(-8vh);
+        text-shadow: 4px 4px 6px rgba(78, 78, 78, 0.842);
+      }
+    }
+    
+}
+
+@media (max-width: 1260px){
+  .choose__transport {
+    margin-right: -10vw;
+  }
+}

@@ -1,0 +1,27 @@
+// Cosas muy generales para toda la página (reseteo de estilos etc)
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding-right: 2rem;
+    box-sizing: border-box;
+    background-color: $color-white;
+    padding-left: 4rem;
+}
+
+.noDecor {
+    &,
+    &:visited {
+    text-decoration: none;
+    color: inherit;
+    }
+}
