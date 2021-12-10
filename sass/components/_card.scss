@@ -1,37 +1,216 @@
-.transporte_card{
+.card--transporte {
+  perspective: 150rem; // perspective works on child elements
+  -moz-perspective: 150rem;
+  position: relative;
+  /* Perspective has gone because when we use position absolute the parent(.card), has width of zero pixels.
+       Here we can not use the clearfix trick, so
+       we add the same height of their childrens */
+  height: 18rem;
+  width: 20vw;
 
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  &__side {
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; // It hides the back side of the component
+    overflow: hidden; // image was overflowing the parent, so the corners were no rounder. This is a fix.
+    box-shadow: 0 1.5rem 4rem rgba($color-black-ocio, 0.15);
+    border-radius: 15px;
 
-    & div {
-        position: absolute;
-        width: 20%;
-        height: 15%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        backface-visibility: hidden;
-        transition: 1s ease-out;
+    &--back {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  @include respond(tab-port) {
+    .card--transporte {
+      height: 10rem;
+      width: 15vw;
+      &__side img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+
+}
+
+.card--ocio {
+  perspective: 150rem; // perspective works on child elements
+  -moz-perspective: 150rem;
+  position: relative;
+  /* Perspective has gone because when we use position absolute the parent(.card--ocio), has width of zero pixels.
+     Here we can not use the clearfix trick, so
+     we add the same height of their childrens */
+  height: 24rem;
+  width: 72%;
+
+  &__side {
+    height: 30rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; // It hides the back side of the component
+    border-radius: 3px;
+    overflow: hidden; // image was overflowing the parent, so the corners were no rounder. This is a fix.
+    box-shadow: 0 1.5rem 4rem rgba($color-black-ocio, 0.15);
+    border: 1px solid #000000;
+
+    &--back {
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light-ocio,
+          $color-secondary-dark-ocio
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light-ocio,
+          $color-primary-dark-ocio
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light-ocio,
+          $color-tertiary-dark-ocio
+        );
+      }
+      &-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-quaternary-light-ocio,
+          $color-quaternary-dark-ocio
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+  &__cta {
+    margin-top: 2rem;
+
+    & img {
+      width: 17rem;
+      height: 12rem;
+      display: block;
+      margin: 0 auto;
+    }
+    & p {
+      text-align: center;
+      color: rgb(252, 246, 246);
+      margin-left: 4rem;
+      margin-right: 4rem;
     }
 
-    &--front{
-        background-color: chocolate;
-        transform: perspective(500px) rotateY(0deg);
+    & a {
+      text-align: center;
+      color: rgb(252, 246, 246);
+      margin-top: 2rem;
+      margin-left: 15rem;
+    }
+  }
 
+  @include respond(tab-port) {
+    .card--ocio {
+      margin-bottom: 10vh;
+
+      &__side {
+        backface-visibility: visible;
+
+        &__side--front {
+          transform: unset;
+          visibility: hidden;
+        }
+        &--back {
+          transform: unset;
+        }
+      }
+
+      &__cta {
+        margin-top: 2rem;
+
+        & img {
+          width: 17rem;
+          height: 12rem;
+          display: block;
+          margin: 0 auto;
+        }
+        & p {
+          text-align: center;
+          color: rgb(252, 246, 246);
+          margin-left: 4rem;
+          margin-right: 4rem;
+        }
+
+        & a {
+          text-align: center;
+          color: rgb(252, 246, 246);
+          margin-top: 2rem;
+          margin-left: 15rem;
+        }
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .card--ocio {
+    margin-bottom: 10vh;
+
+    &__side {
+      backface-visibility: visible;
+
+      &__side--front {
+        transform: unset;
+        visibility: hidden;
+      }
+      &--back {
+        transform: unset;
+      }
     }
 
-    &--back{
-        background-color: rgb(16, 103, 216);
-        transform: perspective(500px) rotateY(180deg);
+    &__cta {
+      margin-top: 2rem;
 
-    }
+      & img {
+        width: 17rem;
+        height: 12rem;
+        display: block;
+        margin: 0 auto;
+      }
+      & p {
+        text-align: center;
+        color: rgb(252, 246, 246);
+        margin-left: 4rem;
+        margin-right: 4rem;
+      }
 
-    &:hover &--front{
-        transform: perspective(500px) rotateY(180deg);
+      & a {
+        text-align: center;
+        color: rgb(252, 246, 246);
+        margin-top: 2rem;
+        margin-left: 15rem;
+      }
     }
-
-    &:hover &--back{
-        transform: perspective(500px) rotateY(360deg);
-    }
+  }
 }
