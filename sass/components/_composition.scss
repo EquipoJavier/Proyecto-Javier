@@ -2,7 +2,6 @@
     position: relative;
     margin-left: 10rem;
 
-    
     &--imagen {
         
         width: 100%;
@@ -13,41 +12,95 @@
         outline-offset: 2rem;
         opacity: .8;
         border-radius: 1rem;
+
+        @include respond(tab-port) {
+            width: 90%;
+        }
+
+
         &--p1 {
             left: -10rem;
-            top: -15rem;
+            top: -15rem; 
+            @include respond(tab-port) {
+                left: -30rem;
+                top: -10rem;
+            }
         }
 
         &--p2 {
             right: -20rem;
             top: 0;
+            @include respond(tab-port) {
+                left: -30rem;
+                top: 10rem;
+            }
         }
 
         &--p3 {
             left: -25rem;
             top: 10rem;
+
+            @include respond(tab-land)  {
+                max-width: 70%;
+                left: -8rem;
+                top: 12rem; 
+            }
+            @include respond(tab-port) {
+                left: -8rem;
+                top: -15rem;
+            }
         }
         &--p4 {
             right: -5rem;
             top: 25rem;
+            @include respond(tab-port) {
+                left: -10rem;
+                top: 0rem;
+            }
         }
         &--p5 {
             left: -10rem;
             top: -15rem;
+            @include respond(tab-port) {
+                left: 8rem;
+                top: -60rem;
+            }
         }
 
         &--p6 {
             right: -10rem;
             top: 0;
+            @include respond(tab-land)  {
+                max-width: 80%;
+                right: -2rem;
+                top: 9rem;
+                z-index: 20;
+            }
+            @include respond(tab-port) {
+                left: 10rem;
+                top: -45rem;
+            }
         }
 
         &--p7 {
             left: -25rem;
             top: 15rem;
+            @include respond(tab-port) {
+                left: 25rem;
+                top: -70rem;
+            }
         }
         &--p8 {
             right: -5rem;
             top: 30rem;
+            @include respond(tab-land)  {
+                max-width: 90%;
+                left: -1rem;  
+            }
+            @include respond(tab-port) {
+                left: 28rem;
+                top: -50rem;
+            }
         }                  
 
         &:hover {
@@ -55,6 +108,9 @@
             box-shadow: 0 2.5rem 4rem rgba($color-black, 1);
             z-index: 30;
             opacity: 1;
+            @include respond(tab-port) {
+                transform: scale(1.1) translateY(-1rem);            
+            }
 
         }
         &--texto{
@@ -71,6 +127,10 @@
             transition: none;
             width: 100%;
 
+            @include respond(tab-port) {
+                width: 90%;
+            }
+
             &:hover{
                 transform:none;
                 box-shadow: none;
@@ -78,7 +138,7 @@
                 opacity: 1;
             }
         }
-    }
+     }
 }
 
 

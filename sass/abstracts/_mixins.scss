@@ -24,6 +24,7 @@
     transform: translate(-50%, -50%);
 
 }
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone
@@ -42,6 +43,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px. Some browers does not work with rem in media queries
 */
+
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content };    //600px
@@ -56,3 +58,4 @@ ORDER: Base + typography > general layout + grid > page layout > components
         @media only screen and (min-width: 112.5em) { @content };    //1800
     }
 }
+

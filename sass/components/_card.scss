@@ -77,24 +77,26 @@
         top:25rem;
         left: 2rem;
         width: 95%;
+
+        &-span {
+            padding: .3rem;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            &--1 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+            &--2 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+            &--3 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+            &--4 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+        }
     }
-    &__heading-span {
-        padding: .3rem;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        &--1 {
-            background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
-        }
-        &--2 {
-            background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
-        }
-        &--3 {
-            background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
-        }
-        &--4 {
-            background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
-        }
-    }
+    
     &__detalles {
         position: absolute;
         padding: 1rem;
@@ -123,5 +125,58 @@
             }
         }
     }
+          
+    @include respond(tab-port) {
+    
+        height: auto;
+        border-radius: 3px;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        
+        &__imagen{
+            clip-path: none;
+        }
+
+        &__lado {
+            height: auto;
+            position: relative;
+            box-shadow: none; 
+            
+            &--detras{
+                transform: rotateY(0);
+            }  
+        } 
+        
+        
+        &:hover &__lado--delante {
+            transform: rotateY(0);
+        }
+               
+        &__detalles {
+            padding: 1rem 3rem;
+            position: relative;
+            top: 0%;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            margin-top: -7rem;
+            
+            ul{
+                li{
+                    font-size: 2rem;
+
+                }
+            }
+        }  
+
+        &__heading {
+            top:20rem;
+        }
+
+    }      
 }
+
+
+
+
 
