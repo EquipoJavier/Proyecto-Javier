@@ -7,6 +7,13 @@
   }
 }
 
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @mixin colwidth {
   @for $size from 1 through $cols {
     @for $length from $size through $cols {
@@ -60,11 +67,6 @@
       @content;
     } //600px
   }
-  @if $breakpoint == bigger-phone {
-    @media only screen and (max-width: 43.75em) {
-      @content;
-    } //700px
-  }
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 56.25em) {
       @content;
@@ -74,11 +76,6 @@
     @media only screen and (max-width: 75em) {
       @content;
     } //1200px
-  }
-  @if $breakpoint == wide-tab {
-    @media only screen and (max-width: 87.5em) {
-      @content;
-    } // 1400px
   }
   @if $breakpoint == big-desktop {
     @media only screen and (min-width: 112.5em) {
