@@ -1,6 +1,6 @@
 .header__ocio {
   height: 100vh;
-  background-image: url("../../Recursos/img/header_ocio_x.jpg");
+  background-image: url("../Recursos/img/header_ocio_x.jpg");
   background-size: cover;
   background-position: bottom;
   position: relative;
@@ -24,7 +24,7 @@
     justify-content: center;
     height: 100vh;
     letter-spacing: 1px;
-    background-image: url(../../Recursos/img/rosa.gif);
+    background-image: url(../Recursos/img/rosa.gif);
     background-size: cover;
     background-position: top;
     color: transparent;
@@ -92,7 +92,7 @@
   height: 115vh;
 
   &--title {
-    background: url("../../Recursos/img/rosa.gif");
+    background: url("../Recursos/img/rosa.gif");
     background-position: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -123,7 +123,7 @@
   padding-top: 15vh;
 
   &--title {
-    background: url("../../Recursos/img/header_ocio_x.jpg");
+    background: url("../Recursos/img/header_ocio_x.jpg");
     background-position: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -139,7 +139,7 @@
   width: 93vw;
   height: 115vh;
   // background-color: rgb(190, 187, 187);
-  background-image: url("../../Recursos/img/mapaverdemadrid.png");
+  background-image: url("../Recursos/img/mapaverdemadrid.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -148,7 +148,7 @@
 
   &--title {
     position: relative;
-    background: url("../../Recursos/img/RUTAS.png");
+    background: url("../Recursos/img/RUTAS.png");
     background-position: bottom;
     background-position: center;
     -webkit-background-clip: text;
@@ -248,7 +248,7 @@
     background-color: white;
 
     &--title {
-      background: url("../../Recursos/img/font-buttons.gif");
+      background: url("../Recursos/img/font-buttons.gif");
       background-position: center;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

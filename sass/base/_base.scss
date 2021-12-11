@@ -25,15 +25,17 @@ html {
     @include respond(big-desktop) {
         font-size: 75%; //  1 rem = 12px, 12/16= 75%
     }
+    
 }
 
-
 body {
-    padding-right: 0;
     box-sizing: border-box;
     background-color: $color-white;
     padding-left: 4rem;
-<<<<<<< HEAD
+
+    @include respond(big-desktop) {
+        padding: 2rem;
+    }
 }
 
 .noDecor {
@@ -43,14 +45,7 @@ body {
     color: inherit;
     }
 }
-=======
 
-    @include respond(big-desktop) {
-        padding: 2rem;
-    }
-
-
-}
 
 @font-face {
     font-family: "WebSymbolsRegular" ;
@@ -62,5 +57,3 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-
->>>>>>> Laura

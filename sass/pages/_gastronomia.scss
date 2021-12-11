@@ -1,3 +1,8 @@
+html {
+    @include respond(big-desktop) {
+        font-size: 62.5%;
+    }
+}
 .header__gastronomia {
     height: 36vh;
     background-image:url('../Recursos/img/header-gastronomia.jpg');
