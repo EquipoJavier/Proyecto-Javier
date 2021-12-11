@@ -14,7 +14,11 @@
         animation-duration: 1s;
         animation-timing-function: ease-out;  
         margin-left: 0rem;
+    }
+    &:not(:hover){
+        transition: all 1s; 
     } 
+
     &__tabla{
         position: absolute;
         color: $color-white;

@@ -20,9 +20,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   0% {
     transform: translate(-10rem);
   }
-  50% {
-    transform: translate(-2rem);
-  }
   100% {
     transform: translate(0rem);
   }
@@ -568,6 +565,9 @@ body {
   animation-duration: 1s;
   animation-timing-function: ease-out;
   margin-left: 0rem;
+}
+.menu:not(:hover) {
+  transition: all 1s;
 }
 .menu__tabla {
   position: absolute;
