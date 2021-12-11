@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .row--transporte{
     max-width: $grid-width-tr; // different than width
     margin: 0 auto; // trick to center block element inside of another block elements. auto value results in a margin of the same size left and right 
@@ -12,10 +13,28 @@
     @include respond(tab-port) {
         max-width: 60rem;
         padding: 0 0rem;
+=======
+.row {
+    max-width: $grid-width; // tamaño máximo
+    margin: 0 auto;
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+        
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+
+    }
+
+    @include respond(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+>>>>>>> Laura
     }
 
     @include clearfix;
     @include colwidth;
+<<<<<<< HEAD
     [class^="col-"] {
         //attribute selector
      float: left;
@@ -118,3 +137,24 @@
     }
 }
 }
+=======
+
+
+    [class^="col-"] {   //asi seleccionamos todas las clases
+        //attribute selector
+     float: left;
+     &:not(:last-child) {
+         margin-right: $gutter-horizontal;
+     
+        @include respond(tab-port) {
+            margin-right: 0;
+            margin-bottom: $gutter-vertical-small;
+        }
+     } 
+    @include respond(tab-port) {
+        width: 100% !important;
+    }
+
+    }
+}
+>>>>>>> Laura

@@ -1,10 +1,10 @@
 .menu{
     position: fixed;
-    height: 100vh;
+    height: 165rem;
     width: 20rem;
     margin-left: -16rem;
 
-    background-color: rgb(46, 44, 44);
+    background-color: $color-menu;
     top: 0rem;
     left: 0;
     z-index: 9000;
@@ -14,10 +14,14 @@
         animation-duration: 1s;
         animation-timing-function: ease-out;  
         margin-left: 0rem;
+    }
+    &:not(:hover){
+        transition: all 1s; 
     } 
+
     &__tabla{
         position: absolute;
-        color: white;
+        color: $color-white;
         text-transform: uppercase;
         width: 100%;
         
