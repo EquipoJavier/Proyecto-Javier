@@ -189,7 +189,14 @@ width: 100vw;
 .choose__transport {
   margin-top: -20vh;
   height: 150vh;
-
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(128, 128, 128, 0.904),
+    rgba(255, 255, 255, 0.8),
+    rgba(128, 128, 128, 0.904)
+  ),
+  url("../Recursos/img/final--transportes.jpg");
+  background-size: cover;
 
   &_options {
     text-align: center;
@@ -325,8 +332,8 @@ width: 100vw;
     .choose__transport {
       margin-top: -25vw;
       height: 130vh;
-      margin-left: 10vw;
       margin-right: -10vw;
+      
     
       &_options {
         text-align: center;
